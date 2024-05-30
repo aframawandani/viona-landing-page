@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Display:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Plus Jakarta Sans" !important;
+}
+
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+.typeface-heading-1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 91px;
+  letter-spacing: -0.015em;
+}
+
+.typeface-heading-2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  letter-spacing: -0.005em;
+}
+
+.typeface-heading-3 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 50px;
+}
+
+.typeface-heading-4 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px;
+}
+
+.typeface-heading-5 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.typeface-subtitle-1 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.typeface-subtitle-2 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.typeface-body {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.typeface-caption {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.typeface-overline {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+}
+
+.slick-slider {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.slick-list {
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 85px;
+  height: 40px;
+  width: 40px;
+}
+
+.slick-arrow.slick-disabled {
+  display: none !important;
+}
+
+.slick-track {
+  display: flex;
+  gap: 24px;
+}
+
+.slick-slider.slick-single .slick-track {
+  gap: 0;
+}
+
+.slick-dots > li {
+  display: flex;
+}
+
+.slick-dots > li > button {
+  background-color: #d0d5dd;
+  border-radius: 6px;
+  height: 12px;
+  font-size: 0;
+  width: 12px;
+}
+
+.slick-image-previewer .slick-dots > li {
+  border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.slick-image-previewer .slick-dots > li.slick-active {
+  outline: #e93323 solid 3px;
+}
+
+.slick-dots > li.slick-active > button {
+  background-color: #f1cb46;
+  width: 24px;
+}
+
+.slick-image-previewer .slick-dots > li > img {
+  height: 100px;
+  width: 100px;
+  object-fit: contain;
+}
+
+.variant input:checked + div {
+  border-color: #1d2939;
+}
+
+.checkbox input:checked + div {
+  background-color: #1d2939;
+}
+
+.color-radio input:checked + div {
+  outline: #1d2939 solid 3px;
+  outline-offset: 3px;
+}

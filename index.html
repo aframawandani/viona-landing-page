@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Viona</title>
+
+    <meta name="description" content="No Description" />
+
+    <link href="assets/style.css" rel="stylesheet" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+              "gradient-conic":
+                "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+            },
+            colors: {
+              "primary-25": "#fff1f7",
+              "primary-50": "#ffd0e5",
+              "primary-100": "#ffb0d3",
+              "primary-200": "#ff90c1",
+              "primary-300": "#ff70af",
+              "primary-400": "#df5190",
+              "primary-500": "#bd3572",
+              "primary-600": "#9b1f56",
+              "primary-700": "#790f3e",
+              "primary-800": "#570429",
+              "secondary-25": "#fff5e5",
+              "secondary-50": "#f1cb46",
+              "neutral-25": "#fcfcfd",
+              "neutral-50": "#f9fafb",
+              "neutral-100": "#f2f4f7",
+              "neutral-200": "#eaecf0",
+              "neutral-300": "#d0d5dd",
+              "neutral-400": "#98a2b3",
+              "neutral-500": "#667085",
+              "neutral-600": "#525252",
+              "neutral-700": "#344054",
+              "neutral-800": "#1d2939",
+              "primary-high": "#01060f",
+            },
+            fontFamily: {
+              overline: "'Plus Jakarta Sans'",
+              "heading-18": "'Plus Jakarta Display'",
+              "text-base-regular": "Inter",
+            },
+            screens: {
+              xs: "540px",
+              "1.5xl": "1440px",
+              "2xs": "480px",
+            },
+          },
+        },
+        plugins: [],
+      };
+    </script>
+
+    <script>
+      $(document).ready(() => {
+        $("#bannerSlider").slick({
+          variableWidth: true,
+          arrows: false,
+          dots: true,
+          dotsClass:
+            "slick-dots absolute left-0 bottom-[16px] w-full flex justify-center gap-3",
+          draggable: false,
+        });
+      });
+    </script>
+  </head>
+
+  <body class="text-neutral-800">
+    <!-- Header -->
+    <header class="sticky z-50 top-0 h-20 bg-primary-700">
+      <div class="mx-auto flex flex-col max-w-[1440px] py-24 px-5 lg:px-20 h-full !py-0">
+        <div class="relative flex items-center gap-2 h-full">
+          <a class="shrink-0 mx-auto lg:mx-0" href="/">
+            <img
+              class="w-[110px] h-16 object-cover"
+              src="assets/images/logo.png"
+              alt=""
+            />
+          </a>
+          <nav class="hidden lg:block fixed lg:static top-[72px] left-0 right-0 ml-auto">
+            <ul class="flex flex-col lg:flex-row items-stetch justify-start shrink-0 text-neutral-800">
+              <li>
+                <a
+                  class="block px-10 lg:px-5 py-[29px] typeface-subtitle-1 text-nowrap text-neutral-25"
+                  href="/"
+                >Beranda</a>
+              </li>
+              <li>
+                <a
+                  class="block px-10 lg:px-5 py-[29px] typeface-subtitle-1 text-nowrap text-neutral-25"
+                  href="#our-products"
+                >Produk Kami</a>
+              </li>
+              <li>
+                <a
+                  class="block px-10 lg:px-5 py-[29px] typeface-subtitle-1 text-nowrap text-neutral-25"
+                  href="#why-viona"
+                >Kenapa Viona</a>
+              </li>
+              <li>
+                <a
+                  class="block px-10 lg:px-5 py-[29px] typeface-subtitle-1 text-nowrap text-neutral-25"
+                  href="#product-categories"
+                >Kategori Produk</a>
+              </li>
+              <li>
+                <a
+                  class="block px-10 lg:px-5 py-[29px] typeface-subtitle-1 text-nowrap text-neutral-25"
+                  href="#contact-us"
+                >Kontak Kami</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative flex flex-col lg:grid lg:grid-cols-2">
+      <div class="slick-single overflow-hidden flex min-h-[320px] max-h-[calc(100vh-80px)] h-[681px] rounded-bl-[104px]" id="bannerSlider">
+        <!-- Slide 1 -->
+        <div class="flex w-screen lg:w-[50vw]">
+          <img
+            class="w-full h-full object-cover"
+            src="assets/images/slide-1.jpg"
+          />
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="flex w-screen lg:w-[50vw]">
+          <img
+            class="w-full h-full object-cover"
+            src="assets/images/slide-2.jpg"
+          />
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="flex w-screen lg:w-[50vw]">
+          <img
+            class="w-full h-full object-cover"
+            src="assets/images/slide-1.jpg"
+          />
+        </div>
+      </div>
+      <div class="order-1 lg:order-[-1] relative p-[30px] lg:p-0 flex flex-col items-start justify-center gap-6">
+        <div class="flex flex-col items-start gap-6 w-full px-0 lg:pl-[154px] lg:pr-5">
+          <div class="absolute top-[50%] left-0 translate-y-[-50%] hidden lg:block shrink-0 w-9 h-[426px] bg-primary-700"></div>
+          <div class="flex flex-col gap-4 w-full">
+            <h1 class="typeface-heading-3 text-primary-800 text-wrap">Pilihan sprei terbaik untuk tidur  yang lebih nyaman</h1>
+            <p class="w-full lg:w-auto typeface-body w-[509px] lg:pr-12 text-wrap text-neutral-500">Nikmati tidur nyaman setiap malam dengan pilihan sprei terbaik kami, dirancang untuk kenyamanan optimal dan istirahat yang berkualitas.</p>
+          </div>
+          <a class="flex items-center gap-6 bg-secondary-50 rounded-lg px-6 py-4 typeface-subtitle-2 text-neutral-800" href="#">
+            Info Lebih Lanjut
+            <img class="w-6 h-6" src="assets/images/arrow-right.svg" />
+          </a>
+        </div>
+      </div>
+      <img class="absolute z-10 left-[50%] top-[50%] translate-y-[-50%] translate-x-[-50%] w-[125px] h-[125px]" src="assets/images/best-products.svg" />
+    </div>
+
+    <!-- Section 1 -->
+    <section class="mx-auto flex flex-col max-w-[1440px] py-16 lg:py-30 px-6 lg:px-20 !flex-row justify-center gap-x-[120px] gap-y-16 flex-wrap !py-14" id="ourProductsSection">
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <div class="bg-secondary-25 px-4 py-2 typeface-subtitle-2 text-neutral-800">PRODUK UNGGULAN</div>
+          <h4 class="typeface-heading-4 lg:!text-[48px] lg:!leading-[58px] text-primary-800">Pilihan Terbaik Untuk Anda</h4>
+        </div>
+        <div class="flex flex-col items-center gap-10">
+          <div class="flex justify-center gap-6 flex-wrap">
+            <div class="flex flex-col gap-4">
+              <a href="#">
+                <img class="rounded-2xl w-[270px] h-[210px] object-cover" src="assets/images/product-1.jpg" />
+              </a>
+              <h6 class="text-center typeface-subtitle-1 font-semibold text-neutral-800">
+                <a href="#">Krisna - sprei king size<br />( 180 x 200)</a>
+              </h6>
+            </div>
+            <div class="flex flex-col gap-4">
+              <a href="#">
+                <img class="rounded-2xl w-[270px] h-[210px] object-cover" src="assets/images/product-2.jpg" />
+              </a>
+              <h6 class="text-center typeface-subtitle-1 font-semibold text-neutral-800">
+                <a href="#">Krisna - sprei king size<br />( 180 x 200)</a>
+              </h6>
+            </div>
+            <div class="flex flex-col gap-4">
+              <a href="#">
+                <img class="rounded-2xl w-[270px] h-[210px] object-cover" src="assets/images/product-3.jpg" />
+              </a>
+              <h6 class="text-center typeface-subtitle-1 font-semibold text-neutral-800">
+                <a href="#">Krisna - sprei king size<br />( 180 x 200)</a>
+              </h6>
+            </div>
+            <div class="flex flex-col gap-4">
+              <a href="#">
+                <img class="rounded-2xl w-[270px] h-[210px] object-cover" src="assets/images/product-1.jpg" />
+              </a>
+              <h6 class="text-center typeface-subtitle-1 font-semibold text-neutral-800">
+                <a href="#">Krisna - sprei king size<br />( 180 x 200)</a>
+              </h6>
+            </div>
+          </div>
+          <a class="flex items-center gap-6 bg-secondary-50 rounded-lg px-6 py-4 typeface-subtitle-2 text-neutral-800" href="#">
+            Lihat Semua Produk
+            <img class="w-6 h-6" src="assets/images/arrow-right.svg" />
+          </a>
+        </div>  
+      </div>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="overflow-hidden bg-primary-25" id="whyVionaSection">
+      <div class="mx-auto flex flex-col gap-8 max-w-[1440px] py-16 lg:pt-30 lg:pb-[100px] px-6 lg:px-[140px]">
+        <div class="flex flex-col gap-10">
+          <div class="flex flex-col lg:grid lg:grid-cols-12 gap-8">
+            <div class="col-span-7">
+              <div class="grid grid-rows-2 xl:grid-cols-2 gap-6">
+                <div class="aspect-[316/700] w-full row-span-2 rounded-xl object-cover bg-[url(assets/images/keunggulan-1.jpg)] bg-center bg-cover"></div>
+                <div class="w-full h-full rounded-xl object-cover bg-[url(assets/images/keunggulan-2.jpg)] bg-center bg-cover"></div>
+                <div class="w-full h-full rounded-xl object-cover bg-[url(assets/images/keunggulan-3.jpg)] bg-center bg-cover"></div>  
+              </div>
+            </div>
+            <div class="col-span-5">
+              <div class="flex flex-col items-start gap-3">
+                <div class="flex flex-col items-start gap-3">
+                  <div class="bg-secondary-25 px-4 py-2 typeface-subtitle-2 text-neutral-800">KEUNGGULAN</div>
+                  <h4 class="typeface-heading-4 lg:!text-[48px] lg:!leading-[58px] text-primary-800">Kenapa memilih Viona?</h4>
+                </div>
+                <div class="flex flex-col gap-6">
+                  <div class="flex gap-4 py-4">
+                    <div class="shrink-0">
+                      <img class="w-12 h-12" src="assets/images/mattress.svg">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <h5 class="typeface-heading-5 text-neutral-800">Tinggi 25 cm</h5>
+                      <p class="typeface-body text-neutral-500">We design with the right design and make the initial picture fit to be in the sky and predicted</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                  <div class="flex gap-4 py-4">
+                    <div class="shrink-0">
+                      <img class="w-12 h-12" src="assets/images/bed.svg">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <h5 class="typeface-heading-5 text-neutral-800">Anti geser dan ribet</h5>
+                      <p class="typeface-body text-neutral-500">We design with the right design and make the initial picture fit to be in the sky and predicted</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                  <div class="flex gap-4 py-4">
+                    <div class="shrink-0">
+                      <img class="w-12 h-12" src="assets/images/thread.svg">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <h5 class="typeface-heading-5 text-neutral-800">Tanpa sambungan</h5>
+                      <p class="typeface-body text-neutral-500">We design with the right design and make the initial picture fit to be in the sky and predicted</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-6">
+                  <div class="flex gap-4 py-4">
+                    <div class="shrink-0">
+                      <img class="w-12 h-12" src="assets/images/ball.svg">
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <h5 class="typeface-heading-5 text-neutral-800">Karet double</h5>
+                      <p class="typeface-body text-neutral-500">We design with the right design and make the initial picture fit to be in the sky and predicted</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row gap-8">
+            <img class="w-full lg:w-[518px] h-[350px] rounded-2xl object-cover" src="assets/images/product-4.jpg" />
+            <div class="shrink-0 flex flex-col items-start justify-center gap-3 rounded-2xl lg:rounded-r-0 bg-primary-700 px-10 lg:px-[120px] py-7 lg:py-20 w-full lg:w-[calc(100vw-518px-32px-max((100vw-1160px)/2,140px))]">
+              <div class="bg-secondary-25 px-4 py-2 typeface-subtitle-2">VIONA</div>
+              <h2 class="typeface-heading-4 xl:text-[48px] xl:leading-[58px] text-white">PILIHAN TERBAIK UNTUK TIDUR ANDA</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="mx-auto flex flex-col gap-8 max-w-[1440px] py-16 lg:pt-30 lg:pb-[100px] px-6 lg:px-[140px]" id="productCategoriesSection">
+      <div class="flex flex-col lg:flex-row gap-x-8 gap-y-6">
+        <div class="flex flex-col">
+          <div class="flex flex-col items-start gap-2">
+            <div class="bg-secondary-25 px-4 py-2 typeface-subtitle-2 text-neutral-800">PRODUK</div>
+            <h4 class="typeface-heading-4 lg:!text-[48px] lg:!leading-[58px] text-primary-800">Pilih kebutuhanmu</h4>
+          </div>  
+        </div>
+        <div class="flex-1 flex items-center justify-start lg:justify-center rounded-2xl bg-secondary-50 gap-6 px-[78px] lg:px-18 py-6">
+          <img class="w-12 h-12" src="assets/images/bed-sheet.svg" />
+          <h5 class="typeface-heading-5 text-neutral-800">Sprei</h5>
+        </div>
+        <div class="flex-1 flex items-center justify-start lg:justify-center rounded-2xl bg-neutral-100 gap-6 px-[78px] lg:px-18 py-6">
+          <img class="w-12 h-12" src="assets/images/bed-2.svg" />
+          <h5 class="typeface-heading-5 text-neutral-800">Bed Cover</h5>
+        </div>
+    </div>
+    </section>
+
+    <!-- Section 4 -->
+    <section class="mx-auto flex flex-col max-w-[1440px] py-16 lg:py-30 px-6 lg:px-20 !flex-row justify-center gap-x-[120px] gap-y-16 flex-wrap !py-14" id="contactUsSection">
+      <div class="flex flex-col gap-6">
+        <div class="flex flex-col items-center justify-center gap-2">
+          <div class="bg-secondary-25 px-4 py-2 typeface-subtitle-2 text-neutral-800">TENTANG KAMI</div>
+          <h4 class="typeface-heading-4 lg:!text-[48px] lg:!leading-[58px] text-primary-800 text-center">Mengenal lebih dekat<br />Viona dan Bonita Group</h4>
+        </div>
+        <div class="flex flex-col lg:grid lg:grid-cols-12 items-center gap-10">
+          <div class="col-span-5">
+            <img class="aspect-[451/152] w-full rounded-2xl" src="assets/images/bonita.png" />
+          </div>
+          <div class="col-span-7 flex flex-col items-start gap-7">
+            <p class="typeface-body text-center lg:text-left text-neutral-800">Vitae nisl bibendum in mollis nulla lorem. Eleifend suspendisse porta ac
+              volutpat. Fermentum sapien nec viverra purus suspendisse aliquam et feugiat.
+              Et ut non lacus varius ac sagittis velit nullam. Massa justo vehicula egestas
+              tincidunt habitant. Vitae nisl bibendum in mollis nulla lorem. Eleifend
+              suspendisse porta ac volutpat. Fermentum sapien nec viverra purus suspendisse
+              aliquam et feugiat. Et ut non lacus varius ac sagittis velit nullam. Massa
+              justo vehicula egestas tincidunt habitant.</p>
+            <a class="flex items-center gap-6 bg-secondary-50 rounded-lg px-6 py-4 typeface-subtitle-2 text-neutral-800" href="#">
+              Info Lebih Lanjut
+              <img class="w-6 h-6" src="assets/images/arrow-right.svg" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Section 5 -->
+    <section class="relative overflow-hidden w-full min-h-[calc(100vw*472/1440)] bg-primary-25 bg-[url(assets/images/section-5.jpg)] bg-[size:70%] bg-[position:top_20%_right_-20px]" id="section5">
+      <div class="absolute top-0 left-0 w-full h-full bg-[linear-gradient(90deg,#790f3e,#790f3e_30%,transparent)]"></div>
+      <div class="relative z-10 mx-auto flex flex-col items-center lg:items-start gap-8 max-w-[1440px] py-8 lg:py-[105px] px-6 lg:px-[140px]">
+        <div class="flex flex-col gap-7 w-full lg:w-1/2">
+          <h2 class="typeface-heading-4 lg:text-[48px] lg:leading-[58px] text-center lg:text-left text-neutral-25">Menemani Tidur Anda Lebih Dari 15 Tahun</h2>
+          <p class="typeface-body text-center lg:text-left text-neutral-25">Vitae nisl bibendum in mollis nulla lorem. Eleifend suspendisse porta ac volutpat. Fermentum sapien nec viverra purus</p>
+        </div>
+        <a class="flex items-center gap-6 bg-secondary-50 rounded-lg px-6 py-4 typeface-subtitle-2 text-neutral-800" href="#">
+          Kontak Kami
+          <img class="w-6 h-6" src="assets/images/arrow-right.svg" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-neutral-100">
+      <div class="mx-auto flex flex-col max-w-[1440px] py-24 px-5 lg:px-20 pt-12 pb-[21px]">
+        <div class="flex flex-col lg:flex-row items-strect gap-x-16 gap-y-12">
+          <div class="basis-3/8 flex flex-col gap-6 text-neutral-500">
+            <div class="flex flex-col items-start justify-center gap-3">
+              <div class="rounded-2xl bg-primary-800 px-7 py-2">
+                <img
+                  class="w-[97px] relative h-[56px] object-cover"
+                  src="assets/images/logo.png"
+                />
+              </div>
+              <div class="self-stretch relative">
+                We ara a lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                sed do eiusmod tempor incididun.
+              </div>
+            </div>
+            <div class="flex items-start justify-start gap-x-14 gap-y-6 flex-wrap">
+              <div class="shrink-0 flex items-center justify-center gap-3">
+                <div class="w-12 rounded-full bg-primary-50 h-12 overflow-hidden shrink-0 flex flex-col items-center justify-center">
+                  <img
+                    class="w-5 relative h-5"
+                    src="assets/images/contact.svg"
+                  />
+                </div>
+                <div class="flex flex-col items-start justify-start gap-[2px]">
+                  <div class="relative">Have a question?</div>
+                  <div class="relative text-base font-semibold text-primary-300">
+                    310-437-2766
+                  </div>
+                </div>
+              </div>
+              <div class="shrink-0 flex items-center justify-center gap-3">
+                <div class="w-12 rounded-full bg-primary-50 h-12 overflow-hidden shrink-0 flex flex-col items-center justify-center">
+                  <img
+                    class="w-5 relative h-5"
+                    src="assets/images/mail.svg"
+                  />
+                </div>
+                <div class="flex flex-col items-start justify-start gap-[2px]">
+                  <div class="relative">Contact us at</div>
+                  <div class="relative text-base font-semibold text-primary-300">
+                    Bonita@site.com
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="basis-5/8 flex flex-col gap-8 text-lg">
+            <div class="flex flex-col items-start justify-center gap-[12px]">
+              <div class="relative font-semibold">Newsletter</div>
+              <div class="self-stretch relative text-sm leading-[150%] text-neutral-500 whitespace-pre-wrap">Be the first one to know about discounts, offers and events weekly in your mailbox. Unsubscribe whenever you like with one click.</div>
+            </div>
+            <div class="relative">
+              <img
+                class="absolute top-4 left-6 w-4 h-4"
+                src="assets/images/mail.svg"
+              />
+              <input
+                class="w-full rounded-full bg-neutral-25 box-border h-12 shrink-0 flex pl-12 pr-[104px] border typeface-overline border-neutral-200 text-sm text-neutral-500"
+                placeholder="Enter your email"
+              />
+              <button class="absolute top-1.5 right-1.5 w-[94px] rounded-2xl bg-primary-300 h-9 py-0 typeface-caption text-white">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full h-[1px] bg-neutral-200"></div>
+      <div class="mx-auto flex flex-col max-w-[1440px] py-24 px-5 lg:px-20 gap-12 pt-[21px] pb-12">
+        <div class="flex items-start justify-between gap-8 flex-wrap">
+          <a class="shrink-0 typeface-subtitle-2" href="#">Beranda</a
+          ><a class="shrink-0 typeface-subtitle-2" href="#">Produk Kami</a
+          ><a class="shrink-0 typeface-subtitle-2" href="#">Kenapa Viona</a
+          ><a class="shrink-0 typeface-subtitle-2" href="#">Kategori Produk</a
+          ><a class="shrink-0 typeface-subtitle-2" href="#">Kontak Kami</a>
+        </div>
+        <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div class="flex items-center justify-start gap-8 lg:gap-2">
+            <a
+              class="shrink-0 flex items-center justify-center rounded-full bg-primary-50 p-3"
+              href=""
+            >
+              <img class="w-6 h-6" src="assets/images/instagram.svg" />
+            </a>
+            <a
+              class="shrink-0 flex items-center justify-center rounded-full bg-primary-50 p-3"
+              href=""
+            >
+              <img class="w-6 h-6" src="assets/images/facebook.svg" />
+            </a>
+            <a
+              class="shrink-0 flex items-center justify-center rounded-full bg-primary-50 p-3"
+              href=""
+            >
+              <img class="w-6 h-6" alt="" src="assets/images/tiktok.svg" />
+            </a>
+            <a
+              class="shrink-0 flex items-center justify-center rounded-full bg-primary-50 p-3"
+              href=""
+            >
+              <div class="flex items-center justify-center">
+                <img class="w-6 h-6" src="assets/images/youtube.svg" />
+              </div>
+            </a>
+          </div>
+          <div class="typeface-caption opacity-[0.5] mix-blend-normal">
+            2024 Viona. All right reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
